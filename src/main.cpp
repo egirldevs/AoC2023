@@ -23,7 +23,7 @@ auto main(int argc, char const* argv[]) -> int
 	auto first_argument = arguments[1];
 	bool is_number = !first_argument.empty() &&
 					 std::find_if(first_argument.begin(), first_argument.end(),
-								  [](unsigned char it) { return std::isdigit(it); }) == first_argument.end();
+								  [](unsigned char it) { return std::isdigit(it); }) != first_argument.end();
 	if (!is_number)
 	{
 		std::cerr << "The first argument must be a positive integer!" << '\n';

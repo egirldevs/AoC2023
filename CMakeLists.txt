@@ -5,9 +5,14 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --stdlib=libc++")
 
-set(SOURCES src/main.cpp)
+set(SOURCES
+	src/main.cpp
+
+	src/day_1.cpp
+	)
 
 add_compile_options("$<$<CONFIG:DEBUG>:-DDEBUG>")
+add_compile_definitions(PROJECT_FOLDER="${CMAKE_SOURCE_DIR}")
 
 add_executable(aoc ${SOURCES})
 target_compile_features(aoc PUBLIC cxx_std_20)
