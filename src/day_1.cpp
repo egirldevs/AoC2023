@@ -11,7 +11,7 @@ namespace advent
 {
 static void puzzle_1()
 {
-	std::ifstream input_file{PROJECT_FOLDER "/inputs/day1"};
+	std::ifstream input_file{"./inputs/day1"};
 	std::uint32_t sum = 0;
 	for (std::string line; std::getline(input_file, line);)
 	{
